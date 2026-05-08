@@ -1,13 +1,62 @@
 {
-    "atomType": "Molecule",
-    "x": 0,
-    "y": 0,
-    "uniqueID": "id-1",
-    "name": "crv.Point",
-    "topLevel": true,
-    "allAtoms": [],
-    "allConnectors": [],
-    "unitsKey": "Unitless",
-    "fileTypeVersion": 1,
-    "filetypeVersion": 1
+  "atomType": "Molecule",
+  "x": 0,
+  "y": 0,
+  "uniqueID": "id-1",
+  "name": "crv.Point",
+  "ioValues": [
+    {
+      "name": "X",
+      "ioValue": 10
+    }
+  ],
+  "topLevel": true,
+  "allAtoms": [
+    {
+      "atomType": "Output",
+      "x": 0.98,
+      "y": 0.5,
+      "uniqueID": "id-2",
+      "ioValues": [
+        {
+          "name": "number or geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ]
+    },
+    {
+      "atomType": "Input",
+      "x": 0.025384615384615384,
+      "y": 0.15384615384615385,
+      "uniqueID": "id-4",
+      "name": "X"
+    },
+    {
+      "atomType": "Code",
+      "x": 0.2688802083333333,
+      "y": 0.42857142857142855,
+      "uniqueID": "id-7",
+      "ioValues": [
+        {
+          "name": "x",
+          "ioValue": 0
+        },
+        {
+          "name": "y",
+          "ioValue": 0
+        },
+        {
+          "name": "z",
+          "ioValue": 0
+        }
+      ],
+      "interpreterVersion": 1,
+      "code": "\nfunction run(x: number = 0, y: number = 0, z: number = 0) {\n  return new replicad.Vertex([x,y,z])\n}",
+      "compiledCode": "\"use strict\";\nfunction run(x = 0, y = 0, z = 0) {\n    return new replicad.Vertex([x, y, z]);\n}\n"
+    }
+  ],
+  "allConnectors": [],
+  "unitsKey": "Unitless",
+  "fileTypeVersion": 1,
+  "filetypeVersion": 1
 }
