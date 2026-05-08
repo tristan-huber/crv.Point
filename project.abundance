@@ -7,7 +7,15 @@
   "ioValues": [
     {
       "name": "X",
-      "ioValue": 10
+      "ioValue": 0
+    },
+    {
+      "name": "Y",
+      "ioValue": 0
+    },
+    {
+      "name": "Z",
+      "ioValue": 0
     }
   ],
   "topLevel": true,
@@ -51,11 +59,46 @@
         }
       ],
       "interpreterVersion": 1,
-      "code": "\nfunction run(x: number = 0, y: number = 0, z: number = 0) {\n  return new replicad.Vertex([x,y,z])\n}",
-      "compiledCode": "\"use strict\";\nfunction run(x = 0, y = 0, z = 0) {\n    return new replicad.Vertex([x, y, z]);\n}\n"
+      "code": "\nfunction run(x: number = 0, y: number = 0, z: number = 0) {\n  return replicad.makeVertex([x,y,z])\n}",
+      "compiledCode": "\"use strict\";\nfunction run(x = 0, y = 0, z = 0) {\n    return replicad.makeVertex([x, y, z]);\n}\n"
+    },
+    {
+      "atomType": "Input",
+      "x": 0.025384615384615384,
+      "y": 0.3657142857142857,
+      "uniqueID": "id-17",
+      "name": "Y"
+    },
+    {
+      "atomType": "Input",
+      "x": 0.025384615384615384,
+      "y": 0.6285714285714286,
+      "uniqueID": "id-20",
+      "name": "Z"
     }
   ],
-  "allConnectors": [],
+  "allConnectors": [
+    {
+      "ap2Name": "x",
+      "ap1ID": "id-4",
+      "ap2ID": "id-7"
+    },
+    {
+      "ap2Name": "number or geometry",
+      "ap1ID": "id-7",
+      "ap2ID": "id-2"
+    },
+    {
+      "ap2Name": "y",
+      "ap1ID": "id-17",
+      "ap2ID": "id-7"
+    },
+    {
+      "ap2Name": "z",
+      "ap1ID": "id-20",
+      "ap2ID": "id-7"
+    }
+  ],
   "unitsKey": "Unitless",
   "fileTypeVersion": 1,
   "filetypeVersion": 1
