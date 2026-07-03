@@ -7,8 +7,8 @@
 ## Inputs
 
 - **X** (number)
-- **Y** (undefined)
-- **Z** (undefined)
+- **Y** (number)
+- **Z** (number)
 
 
 
